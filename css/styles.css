@@ -74,6 +74,10 @@ body {
   outline: 0 !important;
 }
 
+#contact-text {
+  text-align: center;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
