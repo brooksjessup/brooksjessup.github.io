@@ -75,7 +75,7 @@ body {
 }
 
 #contact-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 hr {
