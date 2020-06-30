@@ -47,9 +47,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">About Me</h2>
+                        <h2 class="text-white mb-4">About</h2>
                         <p class="text-white-50">
-                            I'm a data scientist with a PhD and 10+ years of experience in higher education and academic research. I leverage my research experience to ground data science problems in real world contexts, and draw on my experience as an educator to effectively communicate analytical insights to non-technical audiences. I'm particularly interested in using big data in education to help students learn and instructors teach more effectively.
+                            I'm a data scientist with a PhD and 5+ years of experience in higher education and academic research. I leverage my research experience to ground data science problems in real world contexts, and draw on my experience as an educator to effectively communicate analytical insights to non-technical audiences. I'm particularly interested in using big data in education to help students learn and instructors teach more effectively.
                         </p>
                     </div>
                 </div>
@@ -64,20 +64,20 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Course Recommender</h4>
-                            <p class="text-black-50 mb-0">Built an app to help jobseekers land their dream jobs by recommending relevant online courses. Collected data on 4,416 courses from Coursera’s public API and 3,324 jobs from Glassdoor. Built a machine learning model (Doc2Vec) to vectorize job descriptions and match them with course descriptions. Developed a Flask API to service users and deployed it to the web with Heroku.</p>
+                            <h4>Career Course Recommender</h4>
+                            <p class="text-black-50 mb-0">A web application to help jobseekers land their dream jobs by using machine learning to recommend online courses.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project Details Row 1-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/online_learning.jpg" alt="" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Data Collection</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                    <h4 class="text-white">Problem Statement</h4>
+                                    <p class="mb-0 text-white-50">Online learning can be a valuable tool for jobseekers to acquire the skills they need to land the jobs they want, without having to leave the safety of their own homes in the middle of a pandemic. However, each individual jobseeker faces the challenge of determining which courses among the thousands available online will be the most relevant to their particular dream job. Can machine learning help them find the most relevant courses?</p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
@@ -86,14 +86,59 @@
                 </div>
                 <!-- Project Details Row 2-->
                 <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/coursera.jpg" alt="" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Natural Language Processing</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                                    <h4 class="text-white">Data Collection</h4>
+                                    <p class="mb-0 text-white-50">I collected course data from a leading online learning platform, Coursera (link). By writing a Python function to send multiple get requests to Coursera’s public Catalog API (link), I gathered information on all 4,416 courses currently available from their platform. The resulting dataset includes the title, instructor, description, and other features of each of these courses.</p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Details Row 3-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/doc2vec.png" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Data Modeling</h4>
+                                    <p class="mb-0 text-white-50">I built a machine learning model to predict which courses in the dataset would be most relevant to a given job. Using Python’s Gensim library for Natural Language Processing, I trained a Doc2Vec model to learn numerical representations for the rich textual data provided in the descriptions of the courses. The model can take any job description (such as from a job board) and calculate which course descriptions are mathematically most similar to it.</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Details Row 4-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/model_evaluation.png" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Model Evaluation</h4>
+                                    <p class="mb-0 text-white-50">I created a custom metric to evaluate and optimize the model’s predictive performance. Because Doc2Vec is an unsupervised learning model without a target variable, there is no labeled data against which to measure the accuracy of its predictions. I addressed this problem by manually labeling a sample set of job descriptions with relevant course descriptions, and then scoring how well the model predicted their similarity. After this metric was used to tune its hyperparameters, the model is able to predict an average similarity score of about 85% for the labeled data.</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Details Row 5-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Model Deployment</h4>
+                                    <p class="mb-0 text-white-50">I developed and deployed a web application to make the model available to jobseekers. I used the Flask web framework in combination with HTML and CSS to develop an API for receiving job descriptions from users and sending course recommendations in return. I then deployed the app to production on the Heroku platform where it is publicly accessible to jobseekers (link).</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
                         </div>
